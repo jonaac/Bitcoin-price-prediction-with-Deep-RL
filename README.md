@@ -15,7 +15,7 @@ numpy
 
 ## Results
 
-To the left you can see the prediction of the day-to-day pricing of Bitcoin, to the right you can find the prediction of day-to-day price changes of Bitcoin.
+To the left you can see the prediction of the day-to-day pricing of Bitcoin, to the right you can find the prediction of day-to-day Bitcoin price changes.
 <p align="center">
 	<img width="250" src="https://jonaac.github.io/img/lstmprediction.png" />
 	<img width="250" src="https://jonaac.github.io/img/lstmchangeprediction.png" />
