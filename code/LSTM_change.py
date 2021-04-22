@@ -14,12 +14,18 @@ from sklearn.metrics import mean_absolute_error
 
 
 def data_preprocessing(input_df):
+
+    def calc_price_change(ser):
+        ser = ser.rolling(window=2).apply(lambda x: x[1]-x[0])
+        ser.iloc[0] = 0.0
+        return ser
+
     input_df['Date']=pd.to_datetime(input_df['Date']) 
     input_df = input_df.set_index('Date')
     input_df.sort_values('Date', inplace=True, ascending=True)
-    normal = input_df.apply(lambda x:(x-x.min())/(x.max()-x.min()))
-    transformed = (input_df.groupby([lambda x: x.year,lambda x: x.quarter]).transform(lambda x: (x-x.min())/(x.max()-x.min())))
-    return normal,transformed
+    input_df['PriceChange'] = calc_price_change(input_df['Close'])
+    input_df.sort_values('Date', inplace=True, ascending=True)
+    return input_df
 
 def create_dataset(input_df, look_back,prediction):
     X, Y = [], []
@@ -37,11 +43,10 @@ def final_prediction(input_df):
 
 data = pd.read_csv("./data/BTC.csv")
 
-data,quarter = data_preprocessing(data)
+data = data_preprocessing(data)
 
 
-dataset = data.Close.values 
-d = data.Open.values
+dataset = data.PriceChange.values 
 dataset = dataset.astype('float32')
 dataset = np.reshape(dataset, (-1, 1))
 X, Y = create_dataset(dataset, look_back = 3, prediction = 1)    
