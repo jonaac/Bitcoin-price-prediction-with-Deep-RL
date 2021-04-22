@@ -1,3 +1,22 @@
 # Bitcoin price prediction with Deep RL
 
-The concept of using algorithms to ease the decision making in financial markets is nothing new, in fact the term algorithmic trading was coined back in 90s and numerous firms have been using different technologies to make investment decisions since then. In this work I take bitcoin dataset, I analyse it and then implement two different machine learning solutions to address algorithmic trading, one based on recurrent neural network and the other based on deep reinforcement learning. I simulate the trading process and then compare the result of the two methods. In our experiments, the LSTM provides useful results and generates some profits while the DRL approach loses the money.
+In this project, I take a dataset of bitcoin prices, preprocess the data, and implement two LSTM models. The first model predicts bitcoin's day-to-day price and the second model predicts day-to-day price differences. Results showed that the first model'd predictions were able to follow the trend and direction of pricing correctly, however there is a considerable mismatch in the predicted values and the true values. The second model's predictions were more accurate.
+
+## Libraries
+
+```
+Python
+tensorflow
+sklearn
+matplotlib
+pandas
+numpy
+```
+
+## Results
+
+To the left you can see the prediction of the day-to-day pricing of Bitcoin, to the right you can find the prediction of day-to-day price changes of Bitcoin.
+<p align="center">
+	<img width="250" src="https://jonaac.github.io/img/lstmprediction.png" />
+	<img width="250" src="https://jonaac.github.io/img/lstmchangeprediction.png" />
+</p>
