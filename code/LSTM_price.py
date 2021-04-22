@@ -89,24 +89,3 @@ plt.ylabel('price', size=15)
 plt.xlabel('Time step', size=15)
 plt.legend(fontsize=15)
 plt.show();
-
-# net worth changes
-temp = pd.read_csv("./data/BTC.csv")
-fluc=[]
-
-balance = 10
-pos=0
-for i in range (1, len(test_predict)):
-    if test_predict[i]>test_predict[i-1]:
-        # performing buy:
-        balance-=y_test[i-1] 
-        pos+=1
-        networth= pos*y_test[i-1]+ balance
-        fluc.append(networth)
-    elif test_predict[i]<test_predict[i-1]:
-        balance+=y_test[i-1]
-        networth= pos*y_test[i-1]+ balance
-        fluc.append(networth)
-        pos-=1
-  
-plt.plot(fluc)
