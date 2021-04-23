@@ -24,7 +24,8 @@ To the left you can see the prediction of the day-to-day pricing of Bitcoin, to 
 ## Further Work
 
 This is an unfinished project. Some work that I would like to expand on:
-1. Use a more extensive dataset.
-2. Define a strategy to buy, sell, or keep bitcoin based on the predictions made by the LSTM models.
-3. Compare both models. Which one is better for trading purposes, which one will return the highest profit.
-4. Explore the idea of having a Reinforcement Learning agent whose actions are Buy, Sell or Keep learn how to maximize profit based on the predictions.
+1. Explore other possible prediction targets.
+2. Use a more extensive dataset.
+3. Define a strategy to buy, sell, or keep bitcoin based on the predictions made by the LSTM models.
+4. Compare both models. Which one is better for trading purposes, which one will return the highest profit.
+5. Explore the idea of having a Reinforcement Learning agent whose actions are Buy, Sell or Keep learn how to maximize profit based on the predictions.
