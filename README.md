@@ -23,7 +23,7 @@ To the left you can see the prediction of the day-to-day pricing of Bitcoin, to 
 
 ## Further Work
 
-This is an unfinished project, work that I would like to expand on:
+This is an unfinished project. Some work that I would like to expand on:
 1. Use a more extensive dataset.
 2. Define a strategy to buy, sell, or keep bitcoin based on the predictions made by the LSTM models.
 3. Compare both models. Which one is better for trading purposes, which one will return the highest profit.
