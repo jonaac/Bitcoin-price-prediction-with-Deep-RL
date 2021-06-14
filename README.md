@@ -2,7 +2,9 @@
 
 This project was developed Winter 2020
 
-In this project, I take a dataset of bitcoin prices, preprocess the data, and implement two LSTM models. The first model predicts bitcoin's day-to-day price. The second model predicts day-to-day price differences. Results showed that the first modeled predictions were able to follow the trend and direction of pricing correctly. However, there is a considerable mismatch between the predicted values and the actual values. The second model's predictions were more accurate, but not significantly.
+In this project, I take a dataset of bitcoin prices, preprocess the data, and implement two LSTM models. The first model predicts bitcoin's day-to-day price. The second model predicts day-to-day price differences. 
+
+Results showed that the first modeled predictions were able to follow the trend and direction of pricing correctly. However, there is a considerable mismatch between the predicted values and the actual values. The second model's predictions were more accurate, but not significantly.
 
 ## Libraries
 
